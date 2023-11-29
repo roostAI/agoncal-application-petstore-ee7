@@ -19,6 +19,7 @@ Here are a few test scenarios to verify the `equals` method logic:
 
 Remember, the `equals` method is expected not to throw any Exception. Instead, it should always return a boolean value.
 */
+/*test*/ 
 package org.agoncal.application.petstore.model;
 
 import nl.jqno.equalsverifier.EqualsVerifier;
