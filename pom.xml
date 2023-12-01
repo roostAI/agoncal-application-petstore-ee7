@@ -15,7 +15,8 @@
     <version.jboss-javaee>1.1.1.Final</version.jboss-javaee>
     <version.wildfly>26.1.3.Final</version.wildfly>
     <!-- Test -->
-    <version.junit>4.13.2</version.junit>
+    <version.junit>5.7.2</version.junit>
+    <version.junit.platform>1.7.2</version.junit.platform>
     <version.arquillian>1.5.0.0</version.arquillian>
     <version.arquillian.wildfly>3.0.1.Final</version.arquillian.wildfly>
     <version.shrinkwrap>1.2.6</version.shrinkwrap>
@@ -70,6 +71,18 @@
         <groupId>junit</groupId>
         <artifactId>junit</artifactId>
         <version>${version.junit}</version>
+        <scope>test</scope>
+      </dependency>
+      <dependency>
+        <groupId>org.junit.jupiter</groupId>
+        <artifactId>junit-jupiter-api</artifactId>
+        <version>${version.junit}</version>
+        <scope>test</scope>
+      </dependency>
+      <dependency>
+        <groupId>org.junit.platform</groupId>
+        <artifactId>junit-platform-runner</artifactId>
+        <version>${version.junit.platform}</version>
         <scope>test</scope>
       </dependency>
       <dependency>
@@ -159,10 +172,25 @@
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
+      <version>${version.junit}</version>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.junit.jupiter</groupId>
+      <artifactId>junit-jupiter-api</artifactId>
+      <version>${version.junit}</version>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.junit.platform</groupId>
+      <artifactId>junit-platform-runner</artifactId>
+      <version>${version.junit.platform}</version>
+      <scope>test</scope>
     </dependency>
     <dependency>
       <groupId>nl.jqno.equalsverifier</groupId>
       <artifactId>equalsverifier</artifactId>
+      <version>${version.equalsverifier}</version>
     </dependency>
     <dependency>
       <groupId>org.arquillian.universe</groupId>
@@ -329,7 +357,6 @@
                       <version>${version.wildfly}</version>
                       <type>zip</type>
                       <overWrite>false</overWrite>
-                      <!-- TODO don't know why but the plugin looks for a directory called wildfly-11.0.0.Final and not wildfly-${version.wildfly} -->
                       <outputDirectory>${project.build.directory}/wildfly-11.0.0.Final</outputDirectory>
                     </artifactItem>
                   </artifactItems>
@@ -361,7 +388,6 @@
       </dependencies>
     </profile>
   </profiles>
-
 
   <repositories>
     <repository>
