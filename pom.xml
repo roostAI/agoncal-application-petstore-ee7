@@ -112,6 +112,12 @@
         <artifactId>log4j-core</artifactId>
         <version>${version.log4j}</version>
       </dependency>
+       <dependency>
+        <groupId>org.junit</groupId>
+        <artifactId>Test</artifactId>
+        <version>4.13.2</version>
+        <scope>test</scope>
+      </dependency>
       <dependency>
         <groupId>org.junit.jupiter</groupId>
         <artifactId>junit-jupiter-api</artifactId>
@@ -133,33 +139,6 @@
         <scope>test</scope>
       </dependency>
       <!-- Dependency added by Roost-->
-      <dependency>
-        <groupId>org.agoncal.application.petstore.model</groupId>
-        <artifactId>Customer</artifactId>
-        <version>7.0</version>
-        <scope>test</scope>
-      </dependency>
-      <!-- Dependency added by Roost-->
-      <dependency>
-        <groupId>org.agoncal.application.petstore.model</groupId>
-        <artifactId>Address</artifactId>
-        <version>7.0</version>
-        <scope>test</scope>
-      </dependency>
-      <!-- Dependency added by Roost-->
-      <dependency>
-        <groupId>org.agoncal.application.petstore.model</groupId>
-        <artifactId>Item</artifactId>
-        <version>7.0</version>
-        <scope>test</scope>
-      </dependency>
-      <!-- Dependency added by Roost-->
-      <dependency>
-        <groupId>org.agoncal.application.petstore.model</groupId>
-        <artifactId>Product</artifactId>
-        <version>7.0</version>
-        <scope>test</scope>
-      </dependency>
       <!-- Dependency added by Roost-->
       <dependency>
         <groupId>nl.jqno.equalsverifier</groupId>
@@ -172,13 +151,6 @@
         <groupId>nl.jqno.equalsverifier</groupId>
         <artifactId>Warning</artifactId>
         <version>3.12.3</version>
-        <scope>test</scope>
-      </dependency>
-      <!-- Dependency added by Roost-->
-      <dependency>
-        <groupId>org.junit</groupId>
-        <artifactId>Test</artifactId>
-        <version>4.13.2</version>
         <scope>test</scope>
       </dependency>
       <!-- Dependency added by Roost-->
@@ -260,6 +232,12 @@
       <scope>test</scope>
     </dependency>
     <dependency>
+      <groupId>org.junit</groupId>
+      <artifactId>Test</artifactId>
+      <version>4.13.2</version>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
       <groupId>org.junit.jupiter</groupId>
       <artifactId>junit-jupiter-api</artifactId>
       <version>5.7.2</version>
@@ -281,34 +259,6 @@
     </dependency>
     <!-- Dependency added by Roost-->
     <dependency>
-      <groupId>org.agoncal.application.petstore.model</groupId>
-      <artifactId>Customer</artifactId>
-      <version>7.0</version>
-      <scope>test</scope>
-    </dependency>
-    <!-- Dependency added by Roost-->
-    <dependency>
-      <groupId>org.agoncal.application.petstore.model</groupId>
-      <artifactId>Address</artifactId>
-      <version>7.0</version>
-      <scope>test</scope>
-    </dependency>
-    <!-- Dependency added by Roost-->
-    <dependency>
-      <groupId>org.agoncal.application.petstore.model</groupId>
-      <artifactId>Item</artifactId>
-      <version>7.0</version>
-      <scope>test</scope>
-    </dependency>
-    <!-- Dependency added by Roost-->
-    <dependency>
-      <groupId>org.agoncal.application.petstore.model</groupId>
-      <artifactId>Product</artifactId>
-      <version>7.0</version>
-      <scope>test</scope>
-    </dependency>
-    <!-- Dependency added by Roost-->
-    <dependency>
       <groupId>nl.jqno.equalsverifier</groupId>
       <artifactId>EqualsVerifier</artifactId>
       <version>3.12.3</version>
@@ -319,13 +269,6 @@
       <groupId>nl.jqno.equalsverifier</groupId>
       <artifactId>Warning</artifactId>
       <version>3.12.3</version>
-      <scope>test</scope>
-    </dependency>
-    <!-- Dependency added by Roost-->
-    <dependency>
-      <groupId>org.junit</groupId>
-      <artifactId>Test</artifactId>
-      <version>4.13.2</version>
       <scope>test</scope>
     </dependency>
     <!-- Dependency added by Roost-->
