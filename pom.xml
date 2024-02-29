@@ -1,14 +1,11 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-
+<?xml version="1.0"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <groupId>org.agoncal.application</groupId>
   <artifactId>petstoreee7</artifactId>
   <version>7.0</version>
   <packaging>war</packaging>
   <name>Petstore application using Java EE 7</name>
-
   <properties>
     <!-- Java EE and App servers -->
     <version.javaee>7.0</version.javaee>
@@ -47,7 +44,6 @@
     <maven.compiler.source>1.8</maven.compiler.source>
     <maven.compiler.target>1.8</maven.compiler.target>
   </properties>
-
   <dependencyManagement>
     <dependencies>
       <!-- App servers -->
@@ -116,9 +112,35 @@
         <artifactId>log4j-core</artifactId>
         <version>${version.log4j}</version>
       </dependency>
+      <dependency>
+        <groupId>org.junit.jupiter</groupId>
+        <artifactId>junit-jupiter-api</artifactId>
+        <version>5.0.0</version>
+        <scope>test</scope>
+        <!--Dependency added by RoostGPT-->
+      </dependency>
+      <dependency>
+        <groupId>org.junit.vintage</groupId>
+        <artifactId>junit-vintage-engine</artifactId>
+        <version>5.2.0</version>
+        <!--Dependency added by RoostGPT-->
+      </dependency>
+      <dependency>
+        <groupId>org.mockito</groupId>
+        <artifactId>mockito-core</artifactId>
+        <version>3.12.4</version>
+        <scope>test</scope>
+        <!--Dependency added by RoostGPT-->
+      </dependency>
+      <dependency>
+        <groupId>org.junit.jupiter</groupId>
+        <artifactId>junit-jupiter-engine</artifactId>
+        <version>5.8.1</version>
+        <scope>test</scope>
+        <!--Dependency added by RoostGPT-->
+      </dependency>
     </dependencies>
   </dependencyManagement>
-
   <dependencies>
     <dependency>
       <groupId>io.swagger</groupId>
@@ -154,6 +176,33 @@
       <artifactId>jboss-javaee-7.0</artifactId>
       <type>pom</type>
       <scope>provided</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.junit.jupiter</groupId>
+      <artifactId>junit-jupiter-api</artifactId>
+      <version>5.0.0</version>
+      <scope>test</scope>
+      <!--Dependency added by RoostGPT-->
+    </dependency>
+    <dependency>
+      <groupId>org.junit.vintage</groupId>
+      <artifactId>junit-vintage-engine</artifactId>
+      <version>5.2.0</version>
+      <!--Dependency added by RoostGPT-->
+    </dependency>
+    <dependency>
+      <groupId>org.mockito</groupId>
+      <artifactId>mockito-core</artifactId>
+      <version>3.12.4</version>
+      <scope>test</scope>
+      <!--Dependency added by RoostGPT-->
+    </dependency>
+    <dependency>
+      <groupId>org.junit.jupiter</groupId>
+      <artifactId>junit-jupiter-engine</artifactId>
+      <version>5.8.1</version>
+      <scope>test</scope>
+      <!--Dependency added by RoostGPT-->
     </dependency>
     <!-- TEST -->
     <dependency>
@@ -195,7 +244,6 @@
       <scope>test</scope>
     </dependency>
   </dependencies>
-
   <build>
     <finalName>applicationPetstore</finalName>
     <plugins>
@@ -273,7 +321,6 @@
       </plugin>
     </plugins>
   </build>
-
   <profiles>
     <profile>
       <id>arquillian-wildfly-remote</id>
@@ -302,7 +349,6 @@
         </dependency>
       </dependencies>
     </profile>
-
     <profile>
       <id>arquillian-wildfly-managed</id>
       <properties>
@@ -361,13 +407,10 @@
       </dependencies>
     </profile>
   </profiles>
-
-
   <repositories>
     <repository>
       <id>primefaces</id>
       <url>https://repository.primefaces.org/</url>
     </repository>
   </repositories>
-
 </project>
