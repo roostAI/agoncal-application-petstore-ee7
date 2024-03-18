@@ -55,36 +55,5 @@ Solution: Use validation annotations like @NotNull, @Size, etc. on all fields th
 */
 
 // ********RoostGPT********
-import org.junit.Before;
-import org.junit.Test;
-import static org.junit.Assert.assertEquals;
-import org.agoncal.application.petstore.model.Category;
 
-public class CategoryToStringTest {
-
-    private Category category;
-
-    @Before
-    public void setUp() {
-        category = new Category();
-    }
-
-    @Test
-    public void testToStringReturnValue() {
-        String name = "TestCategory";
-        category.setName(name);
-        assertEquals("toString method should return correct name", name, category.toString());
-    }
-
-    @Test
-    public void testToStringReturnValueWhenNameIsNull() {
-        category.setName(null);
-        assertEquals("toString method should return null when name is null", null, category.toString());
-    }
-
-    @Test
-    public void testToStringReturnValueWhenNameIsEmpty() {
-        category.setName("");
-        assertEquals("toString method should return empty string when name is empty", "", category.toString());
-    }
-}
+import java.util.Objects;

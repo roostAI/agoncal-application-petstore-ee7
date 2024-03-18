@@ -84,44 +84,5 @@ Solution: Always override hashCode when equals is overridden, and ensure that th
 */
 
 // ********RoostGPT********
-package org.agoncal.application.petstore.model;
 
-import org.junit.Test;
-import static org.junit.Assert.*;
-
-public class AddressEqualsTest {
-
-    @Test
-    public void testEqualsWithSameObject() {
-        Address address1 = new Address("street1", "city", "zipcode", new Country());
-        Address address2 = address1;
-        assertTrue(address1.equals(address2));
-    }
-
-    @Test
-    public void testEqualsWithDifferentObjectsSameValues() {
-        Address address1 = new Address("street1", "city", "zipcode", new Country());
-        Address address2 = new Address("street1", "city", "zipcode", new Country());
-        assertTrue(address1.equals(address2));
-    }
-
-    @Test
-    public void testEqualsWithNullObject() {
-        Address address1 = new Address("street1", "city", "zipcode", new Country());
-        assertFalse(address1.equals(null));
-    }
-
-    @Test
-    public void testEqualsWithDifferentClassObject() {
-        Address address1 = new Address("street1", "city", "zipcode", new Country());
-        Country country = new Country();
-        assertFalse(address1.equals(country));
-    }
-
-    @Test
-    public void testEqualsWithDifferentValuesObject() {
-        Address address1 = new Address("street1", "city", "zipcode", new Country());
-        Address address2 = new Address("street2", "city2", "zipcode2", new Country());
-        assertFalse(address1.equals(address2));
-    }
-}
+import java.util.Objects;

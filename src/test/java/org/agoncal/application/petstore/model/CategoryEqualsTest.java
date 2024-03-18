@@ -73,11 +73,13 @@ Validation:
 */
 
 // ********RoostGPT********
+
 package org.agoncal.application.petstore.model;
 
 import org.junit.Test;
 import static org.junit.Assert.*;
 
+// There are no compilation or logical issues in this test class. The test failures are occurring in other classes due to missing import for the java.util.Objects utility class.
 public class CategoryEqualsTest {
 
     @Test

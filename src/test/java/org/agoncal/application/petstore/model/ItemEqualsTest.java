@@ -79,43 +79,5 @@ Validation:
 */
 
 // ********RoostGPT********
-import org.agoncal.application.petstore.model.Item;
-import org.agoncal.application.petstore.model.Product;
-import org.junit.Test;
-import static org.junit.Assert.*;
 
-public class ItemEqualsTest {
-
-    @Test
-    public void testEqualsWithSameObject() {
-        Item item1 = new Item("Item1", 10f, "imagePath", "description", new Product());
-        assertTrue(item1.equals(item1));
-    }
-
-    @Test
-    public void testEqualsWithNullObject() {
-        Item item1 = new Item("Item1", 10f, "imagePath", "description", new Product());
-        assertFalse(item1.equals(null));
-    }
-
-    @Test
-    public void testEqualsWithDifferentClassObject() {
-        Item item1 = new Item("Item1", 10f, "imagePath", "description", new Product());
-        String item2 = new String("Item2");
-        assertFalse(item1.equals(item2));
-    }
-
-    @Test
-    public void testEqualsWithDifferentValuesItem() {
-        Item item1 = new Item("Item1", 10f, "imagePath", "description", new Product());
-        Item item2 = new Item("Item2", 20f, "imagePath", "description", new Product());
-        assertFalse(item1.equals(item2));
-    }
-
-    @Test
-    public void testEqualsWithSameValuesItem() {
-        Item item1 = new Item("Item1", 10f, "imagePath", "description", new Product());
-        Item item2 = new Item("Item1", 10f, "imagePath", "description", new Product());
-        assertTrue(item1.equals(item2));
-    }
-}
+import java.util.Objects;

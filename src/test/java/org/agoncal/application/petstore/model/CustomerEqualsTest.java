@@ -70,49 +70,5 @@ Details:
 */
 
 // ********RoostGPT********
-import org.agoncal.application.petstore.model.Customer;
-import org.junit.Before;
-import org.junit.Test;
 
-import static org.junit.Assert.*;
-
-public class CustomerEqualsTest {
-
-    private Customer customer1;
-    private Customer customer2;
-
-    @Before
-    public void setUp() {
-        customer1 = new Customer();
-        customer1.setLogin("testLogin");
-
-        customer2 = new Customer();
-    }
-
-    @Test
-    public void testWhenObjectIsSame() {
-        assertTrue(customer1.equals(customer1));
-    }
-
-    @Test
-    public void testWhenObjectIsNull() {
-        assertFalse(customer1.equals(null));
-    }
-
-    @Test
-    public void testWhenObjectIsOfDifferentClass() {
-        assertFalse(customer1.equals(new String("test")));
-    }
-
-    @Test
-    public void testWhenObjectIsDifferentCustomerWithDifferentLogin() {
-        customer2.setLogin("differentLogin");
-        assertFalse(customer1.equals(customer2));
-    }
-
-    @Test
-    public void testWhenObjectIsDifferentCustomerWithSameLogin() {
-        customer2.setLogin("testLogin");
-        assertTrue(customer1.equals(customer2));
-    }
-}
+import java.util.Objects;

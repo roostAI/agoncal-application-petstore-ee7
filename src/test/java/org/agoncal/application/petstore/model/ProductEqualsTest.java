@@ -79,6 +79,7 @@ Validation:
 */
 
 // ********RoostGPT********
+
 package org.agoncal.application.petstore.model;
 
 import org.junit.Before;

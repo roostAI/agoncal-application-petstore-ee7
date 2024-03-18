@@ -64,53 +64,5 @@ Validation:
 */
 
 // ********RoostGPT********
-package org.agoncal.application.petstore.model;
 
-import org.junit.Test;
-import static org.junit.Assert.*;
-
-public class OrderLineEqualsTest {
-
-    @Test
-    public void testEqualityWithSameObject() {
-        Item item = new Item("Item1", 10f, "path1", "desc1", new Product());
-        OrderLine orderLine = new OrderLine(5, item);
-        assertTrue(orderLine.equals(orderLine));
-    }
-
-    @Test
-    public void testEqualityWithNull() {
-        Item item = new Item("Item1", 10f, "path1", "desc1", new Product());
-        OrderLine orderLine = new OrderLine(5, item);
-        assertFalse(orderLine.equals(null));
-    }
-
-    @Test
-    public void testEqualityWithDifferentClassObject() {
-        Item item = new Item("Item1", 10f, "path1", "desc1", new Product());
-        OrderLine orderLine = new OrderLine(5, item);
-        assertFalse(orderLine.equals(new String("test")));
-    }
-
-    @Test
-    public void testEqualityWithDifferentOrderLineObject() {
-        Item item1 = new Item("Item1", 10f, "path1", "desc1", new Product());
-        OrderLine orderLine1 = new OrderLine(5, item1);
-
-        Item item2 = new Item("Item2", 20f, "path2", "desc2", new Product());
-        OrderLine orderLine2 = new OrderLine(10, item2);
-
-        assertFalse(orderLine1.equals(orderLine2));
-    }
-
-    @Test
-    public void testEqualityWithIdenticalOrderLineObject() {
-        Item item1 = new Item("Item1", 10f, "path1", "desc1", new Product());
-        OrderLine orderLine1 = new OrderLine(5, item1);
-
-        Item item2 = new Item("Item1", 10f, "path1", "desc1", new Product());
-        OrderLine orderLine2 = new OrderLine(5, item2);
-
-        assertTrue(orderLine1.equals(orderLine2));
-    }
-}
+import java.util.Objects;

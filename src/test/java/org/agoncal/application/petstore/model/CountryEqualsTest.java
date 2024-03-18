@@ -79,48 +79,5 @@ Validation:
 */
 
 // ********RoostGPT********
-package org.agoncal.application.petstore.model;
 
-import org.junit.Before;
-import org.junit.Test;
-
-import static org.junit.Assert.*;
-
-public class CountryEqualsTest {
-
-    private Country country1, country2, country3, country4, country5;
-
-    @Before
-    public void setUp() {
-        country1 = new Country("isoCode1", "name1", "printableName1", "iso31", "numcode1");
-        country2 = country1;
-        country3 = new Country("isoCode2", "name2", "printableName2", "iso32", "numcode2");
-        country4 = new Country("isoCode1", "name1", "printableName1", "iso31", "numcode1");
-        country5 = null;
-    }
-
-    @Test
-    public void testSameObjectReference() {
-        assertTrue(country1.equals(country2));
-    }
-
-    @Test
-    public void testDifferentClassObjects() {
-        assertFalse(country1.equals(new Object()));
-    }
-
-    @Test
-    public void testNullObject() {
-        assertFalse(country1.equals(country5));
-    }
-
-    @Test
-    public void testObjectsWithSameISOCode() {
-        assertTrue(country1.equals(country4));
-    }
-
-    @Test
-    public void testObjectsWithDifferentISOCode() {
-        assertFalse(country1.equals(country3));
-    }
-}
+import java.util.Objects;

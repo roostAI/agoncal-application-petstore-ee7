@@ -61,10 +61,13 @@ Validation:
 */
 
 // ********RoostGPT********
+
 import org.junit.Before;
 import org.junit.Test;
 import org.agoncal.application.petstore.model.Item;
 import org.agoncal.application.petstore.model.Product;
+
+import java.util.Objects; // Add this import to fix the error "cannot find symbol: variable Objects"
 
 import static org.junit.Assert.*;
 
